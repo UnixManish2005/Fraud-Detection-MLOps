@@ -3,8 +3,7 @@ import requests
 
 def download_dataset():
     
-    file_id = "18KG_dlqbsp_n2fe3wQtHEsUdZrmremiH"
-    url = f"https://drive.google.com/uc?export=download&id={file_id}"
+    url = f"https://drive.google.com/uc?export=download&id=1VP7TLlgacST2veOpxiDQBFkEJeHheBn3"
     
     save_path = "data/creditcard.csv"
     
