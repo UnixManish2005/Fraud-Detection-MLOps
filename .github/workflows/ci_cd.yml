@@ -22,5 +22,8 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run Training Pipeline
-      run: python pipelines/training_pipeline.py
+    - name: Download Dataset
+      run: python src/download_data.py
+
+    - name: Run Training
+      run: python train.py
