@@ -1,25 +1,17 @@
 import os
-import requests
+import gdown
 
 def download_dataset():
-    
-    url = f"https://drive.google.com/uc?export=download&id=1VP7TLlgacST2veOpxiDQBFkEJeHheBn3"
-    
-    save_path = "data/creditcard.csv"
-    
-    if not os.path.exists('data'):
-        os.makedirs('data')
-        
-    if not os.path.exists(save_path):
-        print("Downloading dataset from Google Drive...")
-        response = requests.get(url)
-        # Check if the request was successful
-        if response.status_code == 200:
-            with open(save_path, 'wb') as f:
-                f.write(response.content)
-            print("Download complete.")
-        else:
-            print(f"Failed to download. Status code: {response.status_code}")
+    file_id = "1VP7TLlgacST2veOpxiDQBFkEJeHheBn3"
+    url = f"https://drive.google.com/uc?id={file_id}"
+    output = "data/creditcard.csv"
+
+    os.makedirs("data", exist_ok=True)
+
+    if not os.path.exists(output):
+        print("Downloading dataset...")
+        gdown.download(url, output, quiet=False)
+        print("Download complete.")
     else:
         print("Dataset already exists.")
 
