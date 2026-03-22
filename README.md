@@ -1,6 +1,6 @@
-# End-to-End MLOps Pipeline for Fraud Detection 
+# End-to-End MLOps Pipeline for Real Time Fraud Detection 
 
-#📌 Overview
+# #Overview
 
 This project is an end-to-end Machine Learning Fraud Detection System that detects fraudulent financial transactions using advanced ML models.
 
